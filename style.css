@@ -1,172 +1,35 @@
-/* === styles.css === */
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Evergreen Cemetery Records</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Evergreen Cemetery Records</h1>
+      <p>Searchable burial records from the cleaned Evergreen dataset.</p>
+    </header>
 
-/* Global resets */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: system-ui, sans-serif;
-  background: #f7f7f7;
-  color: #222;
-  line-height: 1.5;
-}
+    <section class="controls">
+      <input id="searchBox" type="search" placeholder="Search name, family notes, location..." />
 
-/* Layout */
-.site-header {
-  background: #2f4f4f;
-  color: white;
-  padding: 1.5rem;
-  text-align: center;
-}
+      <div class="filters">
+        <input id="yearFrom" type="number" placeholder="Death year from" />
+        <input id="yearTo" type="number" placeholder="Death year to" />
+        <button id="clearBtn">Clear</button>
+      </div>
+    </section>
 
-.site-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
+    <section class="summary">
+      <span id="count">Loading records...</span>
+    </section>
 
-.tagline {
-  margin-top: 0.5rem;
-  font-size: 1.1rem;
-  opacity: 0.9;
-}
+    <section id="results" class="results"></section>
+  </main>
 
-.site-main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-/* Search section */
-.search-section {
-  margin-bottom: 2rem;
-}
-
-.search-label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-#search-input {
-  width: 100%;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  border: 2px solid #ccc;
-  border-radius: 6px;
-}
-
-#search-input:focus {
-  border-color: #2f4f4f;
-  outline: none;
-}
-
-.search-help {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* Results section */
-.results-section h2,
-.detail-section h2 {
-  margin-top: 0;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 0.25rem;
-}
-
-.results-container {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 1rem;
-  min-height: 120px;
-}
-
-.result-item {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #eee;
-  cursor: pointer;
-}
-
-.result-item:last-child {
-  border-bottom: none;
-}
-
-.result-item:hover {
-  background: #f0f0f0;
-}
-
-.result-name {
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-.result-location {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* Detail section */
-.detail-container {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 1rem;
-  min-height: 150px;
-}
-
-.detail-field {
-  margin-bottom: 0.75rem;
-}
-
-.detail-label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 0.25rem;
-}
-
-.detail-value {
-  padding-left: 0.25rem;
-}
-
-/* Footer */
-.site-footer {
-  margin-top: 3rem;
-  padding: 1.5rem;
-  text-align: center;
-  background: #eee;
-  color: #444;
-  font-size: 0.9rem;
-}
-
-.footer-note {
-  margin-top: 0.5rem;
-  font-size: 0.85rem;
-  color: #666;
-}
-
-/* No-JS fallback */
-.noscript-warning {
-  background: #ffdddd;
-  border: 1px solid #cc0000;
-  padding: 1rem;
-  margin: 2rem;
-  border-radius: 6px;
-  color: #660000;
-}
-
-/* Mobile adjustments */
-@media (max-width: 600px) {
-  .site-main {
-    margin: 1rem auto;
-  }
-
-  #search-input {
-    font-size: 1rem;
-  }
-
-  .result-name {
-    font-size: 1rem;
-  }
-}
-
-/* === END styles.css === */
+  <script src="app.js"></script>
+</body>
+</html>
