@@ -1,0 +1,88 @@
+<!-- === CHUNK 1 OF 3: index.html === -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Evergreen Cemetery Burial Lookup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Evergreen Cemetery Burial Lookup</h1>
+    <p class="tagline">
+      Search for loved ones and view burial locations.
+    </p>
+  </header>
+
+  <main class="site-main">
+    <section class="search-section">
+      <label for="search-input" class="search-label">
+        Search by name:
+      </label>
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Type a name (e.g., Smith, Mary Johnson)..."
+        autocomplete="off"
+      />
+      <p class="search-help">
+        Start typing a first or last name. Results will appear below.
+      </p>
+    </section>
+
+    <section class="results-section">
+      <h2>Search Results</h2>
+      <div id="results-container" class="results-container">
+        <p class="results-placeholder">
+          No search yet. Start typing a name above.
+        </p>
+      </div>
+    </section>
+
+    <section class="detail-section">
+      <h2>Burial Details</h2>
+      <div id="detail-container" class="detail-container">
+        <p class="detail-placeholder">
+          Select a result to see full details here.
+        </p>
+      </div>
+    </section>
+  </main>
+<!-- === END CHUNK 1 OF 3: index.html === -->
+<!-- === CHUNK 2 OF 3: index.html === -->
+
+  <footer class="site-footer">
+    <p>
+      Evergreen Cemetery • Public Burial Lookup • Powered by a static dataset
+    </p>
+    <p class="footer-note">
+      For corrections or updates, please contact the cemetery office.
+    </p>
+  </footer>
+
+  <!-- Search engine (Fuse.js) -->
+  <script src="fuse.min.js"></script>
+
+  <!-- Main search logic -->
+  <script src="search.js"></script>
+
+</body>
+</html>
+<!-- === END CHUNK 2 OF 3: index.html === -->
+<!-- === CHUNK 3 OF 3: index.html === -->
+
+  <!-- Fallback for users with JavaScript disabled -->
+  <noscript>
+    <div class="noscript-warning">
+      <h2>JavaScript Required</h2>
+      <p>
+        This burial lookup tool requires JavaScript to function.
+        Please enable JavaScript in your browser settings and reload the page.
+      </p>
+    </div>
+  </noscript>
+
+</body>
+</html>
+<!-- === END CHUNK 3 OF 3: index.html === -->
